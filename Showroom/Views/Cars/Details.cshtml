@@ -1,0 +1,102 @@
+﻿@model Showroom.Models.Car
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Car</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.exterior_color)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.exterior_color)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.work_productivity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.work_productivity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cylinder_number)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cylinder_number)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.year)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.year)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.length)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.length)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.width)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.width)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.height)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.height)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.weight)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.weight)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.maximum_weight)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.maximum_weight)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.top_speed)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.top_speed)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.interior_color)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.interior_color)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.number_of_seat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.number_of_seat)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

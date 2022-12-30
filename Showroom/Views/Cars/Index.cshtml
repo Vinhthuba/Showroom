@@ -1,0 +1,123 @@
+﻿@model IEnumerable<Showroom.Models.Car>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<form asp-action="Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by name: <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" />
+            <input type="submit" value="Search" class="btn btn-default" /> |
+            <a asp-action="Index">Back to Full List</a>
+        </p>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.exterior_color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.work_productivity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cylinder_number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.length)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.width)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.weight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.maximum_weight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.top_speed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.interior_color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.number_of_seat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.price)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.exterior_color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.work_productivity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cylinder_number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.length)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.width)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.height)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.weight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.maximum_weight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.top_speed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.interior_color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.number_of_seat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
